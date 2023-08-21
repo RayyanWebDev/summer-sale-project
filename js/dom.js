@@ -25,9 +25,11 @@ function cardClick(target) {
     if (couponField === "SELL200") {
       discount = total * 0.2;
       totalPrice = total - discount;
-      console.log(totalPrice);
+      // console.log(totalPrice);
+      document.getElementById("discount").innerText = discount;
+      document.getElementById("totalPrice").innerText = totalPrice;
     } else {
-      console.log(20);
+      console.log("Please! Put a Valid CODE");
     }
   });
 }
