@@ -18,6 +18,15 @@ function cardClick(target) {
   total = parseFloat(total) + parseFloat(priceSpan);
   document.getElementById("total").innerText = total;
 
+  if (total > 0) {
+    const purchaseBtn = document.getElementById("makePurchase");
+    purchaseBtn.removeAttribute("disabled");
+  }
+  if (total >= 200) {
+    const applyBtn = document.getElementById("applyBtn");
+    applyBtn.removeAttribute("disabled");
+  }
+
   document.getElementById("applyBtn").addEventListener("click", function () {
     const couponField = document.getElementById("couponId").value;
     // console.log(couponField);
@@ -33,7 +42,3 @@ function cardClick(target) {
     }
   });
 }
-
-// const itemName =
-//     target.parentNode.childNodes[1].childNodes[3].firstChild.nextSibling
-//       .nextSibling.nextSibling.innerText;
