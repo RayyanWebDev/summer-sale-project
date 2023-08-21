@@ -2,7 +2,6 @@ let total = 0;
 
 function cardClick(target) {
   const selectedItems = document.getElementById("selected");
-  //   console.log(target.parentNode.childNodes[1]);
 
   const itemName = target.querySelector(".card-title").innerText;
 
@@ -11,11 +10,9 @@ function cardClick(target) {
 
   selectedItems.appendChild(li);
 
-  // const totalPrice = document.getElementById("total");
-  // console.log(totalPrice);
-  const priceSpan = target.querySelector(".card-actions span").innerText;
+  const priceSpent = target.querySelector(".card-actions span").innerText;
 
-  total = parseFloat(total) + parseFloat(priceSpan);
+  total = parseFloat(total) + parseFloat(priceSpent);
   document.getElementById("total").innerText = total;
 
   if (total > 0) {
@@ -29,12 +26,11 @@ function cardClick(target) {
 
   document.getElementById("applyBtn").addEventListener("click", function () {
     const couponField = document.getElementById("couponId").value;
-    // console.log(couponField);
 
     if (couponField === "SELL200") {
       discount = total * 0.2;
       totalPrice = total - discount;
-      // console.log(totalPrice);
+
       document.getElementById("discount").innerText = discount;
       document.getElementById("totalPrice").innerText = totalPrice;
     } else {
