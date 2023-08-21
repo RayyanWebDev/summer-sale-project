@@ -230,7 +230,7 @@
                 </div>
                 <h2 class="card-title">Full Jersey Set</h2>
                 <div class="card-actions">
-                  <p><span>69.00</span>TK</p>
+                  <p><span>69.10</span>TK</p>
                 </div>
               </div>
             </div>
@@ -239,16 +239,23 @@
         <div>
           <div class="bg-base-100 shadow-xl w-64 mb-4 mt-4">
             <h2>Have coupon?</h2>
-            <input class="h-10" type="text" placeholder="Coupon code" />
-            <button class="btn btn-secondary text-white w-16 h-2">Apply</button>
+            <input
+              id="couponId"
+              class="h-10"
+              type="text"
+              placeholder="Coupon code"
+            />
+            <button id="applyBtn" class="btn btn-secondary text-white w-16 h-2">
+              Apply
+            </button>
           </div>
 
           <div id="selected"></div>
 
           <div class="bg-base-100 shadow-xl w-64">
-            <p>Total Price: <span>00</span>TK</p>
+            <p>Total: <span id="total">00.00</span>TK</p>
             <p>Discount: <span>00</span>TK</p>
-            <p>Total: <span>00</span>TK</p>
+            <p>Total Price: <span>00</span>TK</p>
             <button class="w-64 btn btn-secondary text-white">
               Make Purchase
             </button>
