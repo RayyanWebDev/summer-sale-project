@@ -41,11 +41,11 @@
       </div>
     </header>
 
-    <main class="mx-auto">
-      <div class="flex">
+    <main class="bg-zinc-100">
+      <div class="flex lg:flex-row flex-col">
         <div class="mr-4 mx-auto">
           <h1 class="font-bold mt-4 mb-4">Kitchenware</h1>
-          <div class="flex lg:flex-row">
+          <div class="flex lg:flex-row flex-col gap-y-4">
             <div
               onclick="cardClick(this)"
               class="card w-64 bg-base-100 shadow-xl mr-4"
@@ -189,7 +189,7 @@
             </div>
           </div>
           <h1 class="font-bold mb-4 mt-4">Sportswear</h1>
-          <div class="flex">
+          <div class="flex lg:flex-row flex-col gap-y-4">
             <div
               onclick="cardClick(this)"
               class="card w-64 bg-base-100 shadow-xl mr-4"
@@ -338,9 +338,9 @@
             <h2>Have coupon?</h2>
             <input
               id="couponId"
-              class="h-10"
+              class="h-10 border-2 rounded-md border-gray-300"
               type="text"
-              placeholder="Coupon code"
+              placeholder="   Coupon code"
             />
             <button
               disabled
