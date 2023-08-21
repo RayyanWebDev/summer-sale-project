@@ -352,15 +352,26 @@
 
           <div class="bg-base-100 shadow-xl w-64">
             <p>Total: <span id="total">00.00</span>TK</p>
-            <p>Discount: <span id="discount">00</span>TK</p>
-            <p>Total Price: <span id="totalPrice">00</span>TK</p>
+            <p>Discount: <span id="discount">00.00</span>TK</p>
+            <p>Total Price: <span id="totalPrice">00.00</span>TK</p>
             <button
               disabled
               id="makePurchase"
+              onclick="my_modal_5.showModal()"
               class="w-64 btn btn-secondary text-white"
             >
               Make Purchase
             </button>
+            <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+              <form method="dialog" class="modal-box">
+                <img class="w-28" src="images/congo.png" alt="" />
+                <h3 class="font-bold text-lg">Congratulations</h3>
+                <p class="py-4">Happy Shopping</p>
+                <div class="modal-action">
+                  <button class="btn">Go Home</button>
+                </div>
+              </form>
+            </dialog>
           </div>
         </div>
       </div>
